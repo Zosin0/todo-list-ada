@@ -1,0 +1,14 @@
+<app-add-task-form (taskAdded)="handleTaskAdd($event)"></app-add-task-form>
+
+<div class="task-summary">
+  <span>Total de Tarefas: {{ totalTasks }}</span>
+  <span>Concluídas: {{ completedTasks }}</span>
+</div>
+
+<div class="list-container">
+  <app-task-item *ngFor="let task of tasks"
+    [taskItem]="task"
+    (taskCompleted)="handleTaskComplete($event)"
+    (taskRemoved)="handleTaskRemove($event)">
+  </app-task-item>
+</div>

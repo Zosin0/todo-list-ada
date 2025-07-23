@@ -1,0 +1,14 @@
+.task-summary {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

@@ -1,0 +1,15 @@
+<div class="task-item" *ngIf="taskItem">
+  <div class="task-info">
+    <input type="checkbox" [checked]="taskItem.completed" (change)="completeTask()">
+
+    <span [class.completed]="taskItem.completed">{{ taskItem.description }}</span>
+  </div>
+
+  <div class="task-actions">
+    <span class="due-date" *ngIf="taskItem.dueDate">
+      Data: {{ taskItem.dueDate | date:'dd/MM/yy' }}
+    </span>
+
+    <button (click)="removeTask()">Remover</button>
+  </div>
+</div>
