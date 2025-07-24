@@ -17,7 +17,9 @@ export class TaskListComponent {
       id: Date.now(),
       description: taskData.description,
       completed: false,
-      dueDate: taskData.dueDate || undefined 
+      dueDate: taskData.dueDate
+        ? new Date(taskData.dueDate.getTime() + taskData.dueDate.getTimezoneOffset() * 60000)
+        : undefined
     };
     this.tasks.push(newTask);
   }

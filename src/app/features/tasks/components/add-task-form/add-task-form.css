@@ -35,3 +35,14 @@
 .add-task-form button:hover {
   background-color: #FFA500;
 }
+
+input[type="date"] {
+  background-color: #2A2A2A;
+  border: 1px solid #444;
+  color: #E0E0E0;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  color-scheme: dark;
+}
